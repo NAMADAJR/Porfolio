@@ -1,3 +1,7 @@
+body {
+  cursor: none;
+}
+
 .navbar {
   background-color: #333;
   padding: 1rem;
@@ -24,6 +28,52 @@
 
 .navbar a:hover {
   background-color: #555;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.navbar a.active {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  
+  img{
+    width: 350px;
+    height: 350px;
+    border-radius: 300px;
+  }
+}
+
+/* Custom cursor - large white circle (follows mouse with delay) */
+.custom-cursor-outer {
+  position: fixed;
+  width: 40px; /* Larger white circle */
+  height: 40px; 
+  border-radius: 50%;
+  background-color: white;
+  pointer-events: none;
+  transition: transform 0.15s ease-out; /* Delay effect for smooth follow */
+  z-index: 999;
+  mix-blend-mode: difference; /* Change this to 'multiply' for different effects */
+}
+
+/* Custom cursor - small black circle (immediate movement) */
+.custom-cursor-inner {
+  position: fixed;
+  width: 10px; /* Smaller black circle */
+  height: 10px;
+  border-radius: 50%;
+  background-color: black;
+  pointer-events: none;
+  z-index: 1000;
 }
 
 
