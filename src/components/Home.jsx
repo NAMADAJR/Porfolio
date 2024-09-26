@@ -40,7 +40,7 @@ const Home = () => {
     <div>
       <Header />
       <div className="profile">
-        <img src="src/assets/images/profilepic.png" alt="profile" />
+        <img src="src/assets/images/Profile.png" alt="profile" />
         <h1>I am Namada Junior</h1>
         <div className="txt-type">
           <span>I'm a {text}.</span>
