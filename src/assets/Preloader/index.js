@@ -22,7 +22,7 @@ export const preLoaderAnim = () => {
     // Fade out the preloader after the wave-out finishes (e.g., 1.5s)
     setTimeout(() => {
       preloader.classList.add('fade-out'); // Add class to fade out the preloader
-    }, 1500); // Adjust timing to match the length of wave-out animation
+    }, 350); // Adjust timing to match the length of wave-out animation
 
   }, 4000); // Delay before triggering the wave-out effect
 };
