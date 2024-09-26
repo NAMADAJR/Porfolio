@@ -12,16 +12,40 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    opacity: 1; /* Initial opacity */
+    transition: opacity 1s ease; /* Transition to handle fade out */
 }
 
-.prealoder .text-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 60px;
-    width: 280px;
-    font-size: 20px;
-    font-weight: 800;
-    overflow: hidden;
-    color: white;
+.preloader.fade-out {
+    opacity: 0; /* Fade out the preloader */
+    pointer-events: none; /* Ensure the preloader doesn't block clicks after fading */
+}
+
+.text-container h1 span {
+    display: inline-block;
+    transform: translateY(100%);
+    opacity: 0;
+    animation: waveIn 0.5s ease forwards;
+}
+
+@keyframes waveIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes waveOut {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100); /* No movement */
+        opacity: 0; /* Fade out but still visible */
+    }
 }
