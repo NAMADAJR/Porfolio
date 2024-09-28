@@ -1,13 +1,13 @@
 import React from 'react'
 import Header from './Header'
 
-const Scenery = () => {
+const Contact = () => {
   return (
     <div>
         <Header />
-        <h1>Scenery Page</h1>
+        <h1>Contact Page</h1>
     </div>
   )
 }
 
-export default Scenery
+export default Contact
