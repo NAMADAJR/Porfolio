@@ -1,13 +1,19 @@
-import React from 'react'
-import Header from './Header'
+import React from 'react';
+import Header from './Header';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   return (
-    <div>
-        <Header />
-        <h1>Contact Page</h1>
-    </div>
-  )
-}
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -50 }}
+      transition={{ duration: 0.5 }}
+    >
+      <Header />
+      <h1>Contact Page</h1>
+    </motion.div>
+  );
+};
 
-export default Contact
+export default Contact;
