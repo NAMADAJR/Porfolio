@@ -40,7 +40,7 @@ const Home = () => {
     <div>
       <Header />
       <div className="profile">
-        <img src="src/assets/images/Profile.png" alt="profile" />
+        <img src="https://ik.imagekit.io/po14ul1dat/Nam.jpeg?updatedAt=1727546862103" alt="profile" />
         <h1>I am Namada Junior</h1>
         <div className="txt-type">
           <span>I'm a {text}.</span>
