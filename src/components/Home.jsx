@@ -8,9 +8,9 @@ const Home = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 170 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -50 }}
+      exit={{ opacity: 0, y: -170 }}
       transition={{ duration: 0.5 }}
     >
       <Header />
