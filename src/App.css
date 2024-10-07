@@ -48,11 +48,10 @@
   }
 }
 
-/* About.css */
 .about-container {
   display: flex;
-  gap: 25px;
-  padding: 25px;
+  gap: 45px;
+  padding: 30px;
 }
 
 .about-item {
@@ -82,23 +81,62 @@
   background-color: #333;
 }
 
+/* Fullscreen overlay for details */
 .about-details {
+  position: fixed; /* Cover entire screen */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+  color: whitesmoke;
+  z-index: 100; /* Ensure it is above other elements */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 20px;
-  margin-top: 20px;
-  background-color: #3b3b3b;
-  border-radius: 10px;
+  overflow-y: auto; /* In case the content is too long */
+  border-radius: 0; /* Remove any border-radius for full screen effect */
+  transition: opacity 0.5s ease; /* Fade-in effect */
 }
 
+/* Close button styling */
 .about-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
   padding: 10px 20px;
   background-color: black;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
+  z-index: 101;
 }
 
 .about-button:hover {
   background-color: #504f4f;
+}
+
+/* Media query for small screens */
+@media (max-width: 450px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-item {
+    width: 100%; /* Ensure the items take the full width */
+    max-width: 100%; /* Prevent overflow */
+  }
+
+  .about-details {
+    padding: 10px;
+  }
+
+  .about-details p {
+    color: #ccc; /* Style for the expanded content text */
+    margin-top: 10px;
+  }
 }
